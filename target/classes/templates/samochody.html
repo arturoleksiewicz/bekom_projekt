@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Samochody</title>
+    <style>
+        .box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+<h1>Samochody</h1>
+<div>
+    <h2>Modele Samochodów</h2>
+    <div th:each="model : ${modele}" class="box">
+        <p th:text="${model.nazwa}">Nazwa modelu</p>
+        <!-- Tutaj możesz dodać więcej informacji o modelu -->
+    </div>
+</div>
+<div>
+    <h2>Lista Samochodów</h2>
+    <div th:each="samochod : ${samochody}" class="box">
+        <p th:text="${samochod.nazwa}">Nazwa samochodu</p>
+        <!-- Tutaj możesz dodać więcej informacji o samochodzie -->
+    </div>
+</div>
+</body>
+</html>
